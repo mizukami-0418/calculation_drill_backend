@@ -52,10 +52,7 @@ INSTALLED_APPS = [
     'calculation',  # 追加
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:3000",  # フロントエンドのURL
-    "http://localhost:3000",  # ローカル環境用
-]
+CORS_ALLOWED_ORIGINS = env.list('CORS_ALLOWED_ORIGINS')  # 追加
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
