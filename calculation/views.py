@@ -4,3 +4,8 @@ from rest_framework.response import Response
 class HelloWorldView(APIView):
     def get(self, request):
         return Response({"message": "Hello, World!"})
+
+
+class HelloUserView(APIView):
+    def get(self, request):
+        return Response({"message": f"Hello, User!"})
